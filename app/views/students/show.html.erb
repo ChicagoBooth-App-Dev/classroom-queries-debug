@@ -24,7 +24,7 @@
         Last name
       </dt>
       <dd>
-        <%= @student.last_name %>
+        <%= @student.last_name %> 
       </dd>
 
       <dt>
@@ -49,13 +49,13 @@
 
 <h3>Course Load</h3>
 <ul>
-  <% enrollments = Enrollment.where({:student_id => @student.id }) %>
-  <% enrollments.each do |enrollment| %>
+  <% enrollments = Enrollment.where({:student_id => @student.id }) %> 
+  <% enrollments.each do |enrollment| %> 
     <li>
-      <% course = Course.where({ :id => enrollment.course_id }).at(0) %>
-      <a href="/courses/<%= course.id %>">
-        <%= course.title %>
+      <%  course = Course.where({ :id => enrollment.course_id }).at(0) %> 
+       <a href="/courses/<%= course.id %>">
+        <%=  course.title %>
       </a>
     </li>
-  <% end %>
+  <% end %> 
 </ul>
